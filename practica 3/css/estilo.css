@@ -50,9 +50,17 @@ li[name="fork"]{
 	list-style-image:url("https://goo.gl/y0yaro");
 }
 
+/*Pseudo-clases y Pseudo-elementos*/
+
+nav:hover, li:hover, ul:hover {
+    color: green;
+}
+
+
+
 
 /*MANTENGA COMENTADA ESTA PARTE HASTA EL FINAL*/
-/*section#left {
+section#left {
 	float:left;
 	width:70%;
 	
@@ -64,4 +72,4 @@ aside#right {
 
 footer#footer {
 	clear:both;
-}*/
+}
