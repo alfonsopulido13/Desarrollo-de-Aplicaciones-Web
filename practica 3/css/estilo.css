@@ -1,5 +1,27 @@
 
+/*Selectores básicos*/
+* {
+	font-family:verdana;
+}
 
+h1 {
+	color:blue;
+	text-align:center;
+}
+header#cabecera img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width: 10%;
+}
+header nav ul li.elemento-menu{
+	display:inline;
+	list-style-type:none;	
+}
+#menu{
+	text-align:center;
+}
 
 
 /*MANTENGA COMENTADA ESTA PARTE HASTA EL FINAL*/
