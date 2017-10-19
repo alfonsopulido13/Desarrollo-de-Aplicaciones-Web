@@ -1,5 +1,6 @@
 
 /*Selectores básicos*/
+
 * {
 	font-family:verdana;
 }
@@ -21,6 +22,32 @@ header nav ul li.elemento-menu{
 }
 #menu{
 	text-align:center;
+}
+/*Selectores avanzados*/
+
+footer>p{
+	font-family:italic;
+}
+
+footer#footer{
+	text-align:center	
+}
+
+h3~h4{
+	font-style:italic;
+	color:green;
+}
+
+aside ul li>p{
+	font-size: 8pt;
+}
+
+h5[title$="small"]{
+	text-decoration: underline;
+}
+
+li[name="fork"]{
+	list-style-image:url("https://goo.gl/y0yaro");
 }
 
 
