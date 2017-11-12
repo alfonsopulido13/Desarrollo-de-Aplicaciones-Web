@@ -3,7 +3,7 @@ body {
   background: #ccc;
   text-align: center;
   padding-top: 20px;
-  zoom: 90%;
+  zoom: 80%;
 ;
 }
 
@@ -232,4 +232,8 @@ li.class_img_gallery{
 
 img.img_galeria{
   height: 100px;
+}
+
+div.class_publicaciones{
+  text-align: center;
 }
