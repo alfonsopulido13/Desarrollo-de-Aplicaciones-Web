@@ -19,35 +19,33 @@
       </header>
         
       <div class="container">
-        <div class="masthead">
-          <nav>
-            <ul class="nav nav-justified">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="horarios.html">Horarios Ayudant&iacuteas</a></li>
-              <li><a href="ayudantes.html">Galeria</a></li>
-              <li><a href="publicaciones.html">Publicaciones</a></li>
-              <li class="active"><a href="aulas.html">Aulas</a></li>
-              <li><a href="contactanos.html">Contactos</a></li>
-            </ul>
-          </nav>
+          <div class="masthead">
+            <nav>
+              <ul class="nav nav-justified">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="horarios.html">Horarios Ayudant&iacuteas</a></li>
+                <li><a href="ayudantes.html">Galeria</a></li>
+                <li><a href="publicaciones.html">Publicaciones</a></li>
+                <li class="active"><a href="aulas.html">Aulas</a></li>
+                <li><a href="contactanos.html">Contactos</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-
+        
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <img src="imagen/foto_ini.jpg" class="img-fluid img-thumbnail" alt="Responsive image">
+            <div class="col-sm-12">
+              <div class="border_aulas">
+                <button onclick="getLocation()">Ver tu posicion</button>
+                <div id="mapholder"></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="border_principal">
-                
-            </div>
-          </div>
-        </div>
-      </div>
+
+        
   
       <footer>
         <div class="footer jumbotron text-center">
@@ -86,6 +84,41 @@
           </div>
         </div>
       </footer>
+  
+    <script>
+      var x = document.getElementById("demo");
 
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition, showError);
+          } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+      }
+
+      function showPosition(position) {
+          var latlon = position.coords.latitude + "," + position.coords.longitude;
+          var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+          +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+          document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+      }
+      
+      function showError(error) {
+          switch(error.code) {
+              case error.PERMISSION_DENIED:
+                  x.innerHTML = "User denied the request for Geolocation."
+                  break;
+              case error.POSITION_UNAVAILABLE:
+                  x.innerHTML = "Location information is unavailable."
+                  break;
+              case error.TIMEOUT:
+                  x.innerHTML = "The request to get user location timed out."
+                  break;
+              case error.UNKNOWN_ERROR:
+                  x.innerHTML = "An unknown error occurred."
+                  break;
+          }
+      } 
+    </script>
   </body>
 </html>
