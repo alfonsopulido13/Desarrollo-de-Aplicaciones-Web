@@ -1,10 +1,10 @@
 
 body { 
-  background: #ccc;
+  background: #fff;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   zoom: 80%;
-;
+
 }
 
 div.title {
@@ -237,3 +237,22 @@ img.img_galeria{
 div.class_publicaciones{
   text-align: center;
 }
+
+@media media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@media media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
