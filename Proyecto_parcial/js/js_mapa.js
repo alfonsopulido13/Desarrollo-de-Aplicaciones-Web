@@ -23,7 +23,7 @@ function fn_geocoder(datos){
 	};
 
 	//var
-	 gMarketDV = new google.maps.Marker(config);
+	 //gMarketDV = new google.maps.Marker(config);
 
 }
 
